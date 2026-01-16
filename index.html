@@ -57,6 +57,9 @@
             color: #667eea;
             text-decoration: none;
             transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
         
         .contact-info a:hover {
@@ -175,6 +178,41 @@
             margin-bottom: 10px;
         }
         
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
+        }
+        
+        .contact-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+        
+        .contact-btn.email {
+            background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);
+        }
+        
         ul {
             margin: 15px 0;
             padding-left: 20px;
@@ -196,6 +234,17 @@
             .stats {
                 grid-template-columns: 1fr;
             }
+            
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -206,7 +255,8 @@
             <p class="subtitle">SEO Content Strategist & Managing Editor</p>
             <div class="contact-info">
                 <span>📍 Jakarta, Indonesia</span>
-                <a href="mailto:your.email@example.com">📧 Contact Me</a>
+                <a href="https://wa.me/6281213251562" target="_blank">💬 WhatsApp</a>
+                <a href="mailto:tanri.raafani@gmail.com">📧 Email</a>
             </div>
         </header>
 
@@ -387,7 +437,16 @@
         <div class="section" style="text-align: center;">
             <h2>Let's Connect</h2>
             <p style="margin: 20px 0;">Interested in discussing SEO strategy, AI-powered content, or collaboration opportunities?</p>
-            <a href="mailto:your.email@example.com" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 10px;">Get In Touch</a>
+            <div class="contact-buttons">
+                <a href="https://wa.me/6281213251562?text=Hi%20Tanri%2C%20I%27m%20interested%20in%20discussing%20a%20collaboration%20opportunity" target="_blank" class="contact-btn whatsapp">
+                    <span>💬</span>
+                    <span>WhatsApp Me</span>
+                </a>
+                <a href="mailto:tanri.raafani@gmail.com?subject=Portfolio Inquiry&body=Hi Tanri, I came across your portfolio and would like to discuss..." class="contact-btn email">
+                    <span>📧</span>
+                    <span>Send Email</span>
+                </a>
+            </div>
         </div>
     </div>
 </body>
